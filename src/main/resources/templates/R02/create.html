@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head th:replace="~{/00Plantilla/plantilla :: head}"></head>
+
+<body>
+    <div class="container">
+        <h1> Crear Reporte </h1>
+
+        <h3>Ingresa los datos</h3>
+        <form th:action="@{/Reporte-conducta/save}" method="post" 
+        class="needs-validation was-validated " validate>
+            <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" name="nombre" placeholder="Nombre Alumna" required>
+                <div class="invalid-feedback">
+                    Inserta el nombre
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label">Apellido</label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" name="apellido"
+                    placeholder="Apellido Alumna" required>
+                    <div class="invalid-feedback">
+                        Inserta el apellido
+                    </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="formGroupExampleInput3" class="form-label">Motivo del reporte</label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" name="reprote"
+                    placeholder="Reporte Alumna" required>
+                    <div class="invalid-feedback">
+                        Inserta motivo
+                    </div>
+            </div>
+
+            <button class="btn btn-success">Guardar</button>
+        
+        </form>
+
+    </div>
+</body>
+
+</html>

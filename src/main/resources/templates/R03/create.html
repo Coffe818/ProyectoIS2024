@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head th:replace="~{/00Plantilla/plantilla :: head}"></head>
+
+<body>
+
+  <div class="container">
+
+    <h1>Agregar Datos Alumno</h1>
+
+    <form th:action="@{/Reprorte-talleres/save}" method="post" autocomplete="off"
+      class="needs-validation was-validated " validate>
+
+      <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">Nombre Del Alumno</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" name="nombre"
+          placeholder="Escriba el nombre del Alumno" required>
+        <div class="invalid-feedback">
+          Ingrese el nombre de la alumna
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">Taller Que Desea llevar </label>
+        <input type="text" class="form-control" id="formGroupExampleInput2" name="descripcion"
+          placeholder="Escriba el taller a cursar" required>
+        <div class="invalid-feedback">
+          Ingrese el taller
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="formGroupExampleInput3" class="form-label">Semestre Actual </label>
+        <input type="number" class="form-control" id="formGroupExampleInput2" name="precio"
+          placeholder="Escriba el semestre que esta cursando" required>
+        <div class="invalid-feedback">
+          Ingrese el semeste actual
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-success">Guardar</button>
+
+    </form>
+  </div>
+
+
+</body>
+
+</html>

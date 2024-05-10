@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head th:replace="~{/00Plantilla/plantilla :: head}"></head>
+
+<body>
+  <div class="container">
+
+
+
+    <h1>Agregar Datos</h1>
+
+    <form th:action="@{/Reporte-socioeconomico/save}" method="post" autocomplete="off" class="needs-validation was-validated" validate>
+
+      <div class="mb-3">
+        <input type="hidden" name="id" th:value="${reportes.id}">
+        <label for="formGroupExampleInput" class="form-label">Nuero de dependientes</label>
+        <input type="number" class="form-control" id="formGroupExampleInput" name="numero_de_dependientes"
+          placeholder="Escriba el numero de dependietnes"th:value="${reportes.numero_de_dependientes}"required>
+          <div class="invalid-feedback">
+            Inserta el numero de dependientes
+
+          </div>
+      </div>
+      <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">Ingresos familiares </label>
+        <input type="number" class="form-control" id="formGroupExampleInput2" name="ingresos_familiares"
+          placeholder="Escriba los ingresos familiares" th:value="${reportes.ingresos_familiares}"required>
+          <div class="invalid-feedback">
+            Inserta los ingresos familiares
+
+          </div>
+
+      </div>
+
+      <div class="mb-3">
+        <label for="formGroupExampleInput3" class="form-label">Situacion laboral de los padres</label>
+        <input type="text" class="form-control" id="formGroupExampleInput2" name="situación_laboral_de_los_padres"
+          placeholder="Escriba la suituacion laboral" th:value="${reportes.situación_laboral_de_los_padres}"required>
+          <div class="invalid-feedback">
+            Ingresa la situacion de trabajo
+
+          </div>
+
+      </div>
+
+      <button type="submit" class="btn btn-success">Guardar</button>
+
+    </form>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head th:replace="~{/00Plantilla/plantilla :: head}"></head>
+
+<body>
+
+  <div class="container">
+
+    <h1> Actualizar Datos</h1>
+
+    <form th:action="@{/Reprorte-talleres/save}" method="post" autocomplete="off" class="needs-validation was-validated" validate>
+      <input type="hidden" name="id" th:value="${producto.id}">
+
+
+      <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">Nombre Alumno</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" name="nombre" th:value="${producto.nombre}"required>
+        <div class="invalid-feedback">
+          Ingrese el nombre
+
+        </div>
+
+      </div>
+      <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">Ingresa el taller </label>
+        <input type="text" class="form-control" id="formGroupExampleInput2" name="descripcion"
+          th:value="${producto.descripcion}"required>
+          <div class="invalid-feedback">
+            Ingrese el taller
+          </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="formGroupExampleInput3" class="form-label">Semestre actual </label>
+        <input type="number" class="form-control" id="formGroupExampleInput2" name="precio" th:value="${producto.precio}"required>
+        <div class="invalid-feedback">
+          Ingrese el semeste actual
+
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-success">Guardar</button>
+
+    </form>
+  </div>
+
+</body>

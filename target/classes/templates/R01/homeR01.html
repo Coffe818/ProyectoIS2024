@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head th:replace="~{/00Plantilla/plantilla :: head}"></head>
+
+<body>
+
+    <head th:replace="~{/00Plantilla/plantilla :: nav}"></head>
+    <div class="container">
+        <h1>Registrar Alumnas</h1>
+
+        <div class="d-flex justify-content-between">
+
+            <a th:href="@{Reprorte-registrar-alumas/crear_R01}" class="btn btn-primary  "> Nuevo</a>
+            <button class="btn btn-info  " onclick="imprimirTabla()">Imprimir</button>
+        </div>
+
+        <table id="Tabla" class="table table-striped ">
+            <thead class=" sticky-top">
+                <tr>
+                    <th scope="col" class="visually-hidden">Id Alumna</th>
+                    <th scope="col" class="text-center">Matricula</th>
+                    <th scope="col">Nombre </th>
+                    <th scope="col">Apellido</th>
+                    <th scope="col">Ciudad</th>
+                    <th scope="col">Telefono</th>
+
+                    <th colspan="2" scope="col" class="text-center">Accion</th>
+
+                </tr>
+            </thead>
+            <tbody class="table-group-divider">
+                <tr th:each="alumna:${alumnas}">
+                    <td scope="row" th:text="${alumna.R01_id_alumna}" class="visually-hidden"></td>
+                    <td class="text-center" th:text="${alumna.R01_matricula}"></td>
+                    <td th:text="${alumna.R01_nombre}"></td>
+                    <td th:text="${alumna.R01_apellido}"></td>
+                    <td th:text="${alumna.R01_ciudad}"></td>
+                    <td th:text="${alumna.R01_telefono}"></td>
+
+                    <td class="text-center">
+                        <a th:href="@{Reprorte-registrar-alumas/editar_R01/{id}   (id=${alumna.R01_id_alumna})}"
+                            class="btn btn-warning ">Editar</a>
+                    </td>
+                    <td class="text-center">
+                        <a th:href="@{Reprorte-registrar-alumas/borrar_R01/{id}   (id=${alumna.R01_id_alumna})}"
+                            class="btn btn-danger ">Eliminar</a>
+                    </td>
+
+
+                </tr>
+            </tbody>
+        </table>
+
+
+    </div>
+    <script th:replace="~{/00Plantilla/plantilla :: sct}"></script>
+</body>
+
+</html>
+<!DOCTYPE html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head th:replace="~{/00Plantilla/plantilla :: head}"></head>
+
+<body>
+<body>
+	<head th:replace="~{/00Plantilla/plantilla :: nav}"></head>
+
+    <div class="container">
+
+		<h1>Reporte socioeconomico</h1>
+
+
+		<div class="d-flex justify-content-between">
+
+			<a th:href="@{/Reporte-socioeconomico/create}" class="btn btn-primary"> Nuevo</a>
+
+			<button class="btn btn-info  " onclick="imprimirTabla()">Imprimir</button>
+		</div>
+
+		<table id="Tabla" class="table table-striped ">
+            <thead class=" sticky-top">
+
+                <tr>
+                    <th scope="col" class="visually-hidden">Id Alumna</th>
+                    <th scope="col">Dependientes</th>
+                    <th scope="col">Ingresos Familiares </th>
+                    <th scope="col">Situacion de los padres</th>
+
+                    <th colspan="2" scope="col" class="text-center">Accion</th>
+
+                </tr>
+            </thead>
+            <tbody class="table-group-divider">
+                <tr th:each="rep:${reportes}">
+
+                    <td scope="row" th:text="${rep.id}" class="visually-hidden"></td>
+                    <td class="text-center" th:text="${rep.numero_de_dependientes}"></td>
+                    <td class="text-center" th:text="${rep.ingresos_familiares}"></td>
+                    <td class="text-center" th:text="${rep.situación_laboral_de_los_padres}"></td>
+                    
+
+                    <td class="text-center">
+                        <a th:href="@{Reporte-socioeconomico/edit/{id}  (id=${rep.id})}"
+                            class="btn btn-warning ">Editar</a>
+                    </td>
+                    <td class="text-center">
+                        <a th:href="@{Reporte-socioeconomico/delete/{id}  (id=${rep.id})}"
+                            class="btn btn-danger ">Eliminar</a>
+                    </td>
+
+
+                </tr>
+            </tbody>
+        </table>
+        <script th:replace="~{/00Plantilla/plantilla :: sct}"></script>
+
+	</div>
+</body>
+</html>

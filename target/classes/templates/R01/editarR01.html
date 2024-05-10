@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head th:replace="~{/00Plantilla/plantilla :: head}"></head>
+
+<body>
+    <div class="container">
+        <h1>Registrar alumna</h1>
+
+        <h3>Datos a editar</h3>
+        <form th:action="@{/Reprorte-registrar-alumas/save_R01}" method="post"  autocomplete="off" class="needs-validation was-validated" validate>
+            <input type="hidden" name="R01_id_alumna" th:value="${alumna.R01_id_alumna}">
+            <input type="hidden" name="R01_matricula" th:value="${alumna.R01_matricula}">
+
+            <div class="mb-3">
+                <label for="formGroupExampleInput5" class="form-label">Matricula</label>
+                <input type="text" class="form-control diaible" id="formGroupExampleInput5" name="R01_matricula"
+                    placeholder="telefono" th:value="${alumna.R01_matricula}"  disabled>
+                
+            </div>
+            <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">Nombre </label>
+                <input type="text" class="form-control" id="formGroupExampleInput" name="R01_nombre"
+                    placeholder="Nombre" th:value="${alumna.R01_nombre}" required>
+                <div class="invalid-feedback">
+                    Inserta el nombre
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label">Apellido </label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" name="R01_apellido"
+                    placeholder="Apellido" th:value="${alumna.R01_apellido}" required>
+                <div class="invalid-feedback">
+                    Inserta el apellido
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="formGroupExampleInput3" class="form-label">Ciudad de origen</label>
+                <input type="text" class="form-control" id="formGroupExampleInput3" name="R01_ciudad"
+                    placeholder="Ciudad" th:value="${alumna.R01_ciudad}" required>
+                <div class="invalid-feedback">
+                    Inserta ciudad la origen
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="formGroupExampleInput4" class="form-label">Telefono</label>
+                <input type="number" class="form-control " id="formGroupExampleInput4" name="R01_telefono"
+                    placeholder="telefono" th:value="${alumna.R01_telefono}" required>
+                <div class="invalid-feedback">
+                    Inserta el telefono
+                </div>
+            </div>
+
+            <button class="btn btn-success">Guardar</button>
+
+        </form>
+    </div>
+</body>
+
+</html>

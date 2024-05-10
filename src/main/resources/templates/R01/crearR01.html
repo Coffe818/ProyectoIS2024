@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head th:replace="~{/00Plantilla/plantilla :: head}"></head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Registrar alumna</h1>
+
+        <h3>Ingrese los datos de la alumna</h3>
+        <form th:action="@{/Reprorte-registrar-alumas/save_R01}" method="post" autocomplete="off"
+            class="needs-validation was-validated " validate>
+            <div class="mb-3">
+                <label for="formGroupExampleInput4" class="form-label">Matricula</label>
+                <input type="number" class="form-control " id="formGroupExampleInput4" name="R01_matricula"
+                    placeholder="Matricula" required>
+                <div class="invalid-feedback">
+                    Inserta la matricula
+                </div>
+            </div>
+            
+            <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">Nombre </label>
+                <input type="text" class="form-control" id="formGroupExampleInput" name="R01_nombre"
+                    placeholder="Nombre" required>
+                <div class="invalid-feedback">
+                    Inserta el nombre
+                </div>
+
+            </div>
+            <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label">Apellido </label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" name="R01_apellido"
+                    placeholder="Apellido" required>
+                <div class="invalid-feedback">
+                    Inserta el apellido
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="formGroupExampleInput3" class="form-label">Ciudad de origen</label>
+                <input type="text" class="form-control" id="formGroupExampleInput3" name="R01_ciudad"
+                    placeholder="Ciudad" required>
+                <div class="invalid-feedback">
+                    Inserta la ciudad de origen
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="formGroupExampleInput4" class="form-label">Telefono</label>
+                <input type="number" class="form-control " id="formGroupExampleInput4" name="R01_telefono"
+                    placeholder="Telefono" required>
+                <div class="invalid-feedback">
+                    Inserta el telefono
+                </div>
+            </div>
+
+            <button class="btn btn-success" type="submit">Guardar</button>
+            <!-- <button class="btn btn-primary" type="submit">Submit form</button> -->
+        </form>
+    </div>
+</body>
+
+</html>
