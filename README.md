@@ -44,5 +44,49 @@
   En caso de queres usar este proyecto necesitaras tener java 21 y dirigirte al archivo application.properties el cual se encuentra en src/main/resources y ahi hacer tu conexion a la base de datos que quieras usar, 
   ahi esta un ejemplo de como conectarlo en MySql
 
+<h3>Teconoligias usadas</h3>
+<table>
+  <tr>
+    <th>
+      <a href='#' target='_blank'>
+        <img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg' width='50' />
+      </a>
+    </th>
+    <td>Spring Boot</td>
+  </tr>
+  <tr>
+    <th>
+      <a href='#' target='_blank'>
+        <img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg' width='50' />
+      </a>
+    </th>
+    <td>Java</td>
+  </tr>
+  <tr>
+    <th>
+      <a href='#' target='_blank'>
+        <img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-plain.svg' width='50' />
+      </a>
+    </th>
+    <td>Html</td>
+  </tr>
+  <tr>
+    <th>
+      <a href='#' target='_blank'>
+        <img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg' width='50' />
+      </a>
+    </th>
+    <td>Bootstrap</td>
+  </tr>
+  <tr>
+    <th>
+      <a href='#' target='_blank'>
+        <img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg' width='50' />
+      </a>
+    </th>
+    <td>MySql</td>
+  </tr>
+</table>
+
 
 </div>
